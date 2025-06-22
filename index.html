@@ -1,15 +1,391 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>我的第一個網頁</title>
-
-    <!-- 其他元訊息 -->
-	
-  </head>
-  <body>
-
-  hi,這是測試的畫面，看的到嬤?
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
   
-   </body>
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo2">
+                    <div class="skin-clinic">樂柞家居</div>
+                </div>
+                <div class="logo-en">
+                    <div class="skin-clinic2">Lezuo Home</div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="navigation" id="navigation">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">首頁</a>
+                </div>
+                <div class="nav-item">
+                    <a href="service.html" class="nav-link">服務項目</a>
+                </div>
+                <div class="nav-item">
+                    <a href="sharing.html" class="nav-link">案例分享</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link">關於我們</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" onclick="toggleDropdown(event)"></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">首頁</a>
+                        <a href="service.html">服務項目</a>
+                        <a href="sharing.html">案例分享</a>
+                        <a href="about.html">關於我們</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-contain">
+      <div class="img">
+        <img class="img2" src="images/img1.png" />
+      </div>
+      <div class="news">
+        <div class="news2">
+          <div class="txt">
+            <div class="txt2">
+              <div class="book-an-appointment">新品上市</div>
+            </div>
+            <div class="txt3">
+              <div class="dermatology-skin-c">寵愛毛小孩</div>
+            </div>
+            <div class="txt4">
+              <div class="treating-all-skin-co">
+                義大利進口貓抓皮革到貨，為現代毛寵家庭獻上頂級的服務
+                <br />
+                多款尺寸顏色提供客製化，一同打造溫馨居家生活
+              </div>
+            </div>
+          </div>
+          <div class="bottom-buy">
+            <div class="book-an-appointment2">BUY Now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="information">
+      <div class="icons">
+        <div class="icons2">
+          <img class="group" src="images/group0.svg" />
+        </div>
+        <div class="txt5">
+          <div class="div">免費到府丈量安裝</div>
+          <div class="div2">為您量身訂做溫馨家園</div>
+        </div>
+      </div>
+      <div class="icons3">
+        <div class="icons4">
+          <img class="five-1" src="images/five-10.png" />
+        </div>
+        <div class="txt6">
+          <div class="_5">5年保固認證</div>
+          <div class="div2">最用心的售後服務</div>
+        </div>
+      </div>
+      <div class="icons">
+        <div class="icons5">
+          <img
+            class="interest-rate-16869511-1"
+            src="images/interest-rate-16869511-10.png"
+          />
+        </div>
+        <div class="txt7">
+          <div class="cp">最高cp值</div>
+          <div class="div2">給您最合理的價格與快速的服務</div>
+        </div>
+      </div>
+    </div>
+    <div class="sharing">
+      <div class="tit">
+        <div class="div3">案例分享</div>
+      </div>
+      <div class="img3">
+        <div class="list">
+          <div class="img4">
+            <div class="rectangle-86"></div>
+            <div class="img5">
+              <img class="mask-group-1" src="images/mask-group-10.png" />
+            </div>
+          </div>
+          <div class="txt8">
+            <div class="treating-all-skin-co2">台中市·兩人小家庭</div>
+          </div>
+        </div>
+        <div class="list2">
+          <div class="frame-199">
+            <img
+              class="scandinavian-interior-mockup-wall-decal-background-2-1"
+              src="images/scandinavian-interior-mockup-wall-decal-background-2-10.png"
+            />
+          </div>
+          <div class="txt8">
+            <div class="treating-all-skin-co2">台北市·單人租屋族</div>
+          </div>
+        </div>
+        <div class="list3">
+          <div class="img6">
+            <div class="rectangle-87"></div>
+            <div class="img7">
+              <img class="mask-group-1-2" src="images/mask-group-1-20.png" />
+            </div>
+          </div>
+          <div class="txt9">
+            <div class="treating-all-skin-co2">高雄市·多人大家庭</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="poducts">
+      <div class="tit2">
+        <div class="div3">產品類別</div>
+      </div>
+      <div class="img-list">
+        <div class="list4">
+          <div class="img8">
+            <img class="mask-group" src="images/mask-group0.svg" />
+          </div>
+          <div class="bed">
+            <div class="div4">床架規劃</div>
+          </div>
+        </div>
+        <div class="list5">
+          <div class="img8">
+            <img class="mask-group2" src="images/mask-group1.svg" />
+          </div>
+          <div class="sofa">
+            <div class="div4">沙發規劃</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ordering">
+      <div class="tit2">
+        <div class="div3">訂購流程</div>
+      </div>
+      <div class="order-list">
+        <div class="list6">
+          <div class="img9">
+            <div class="img10">
+              <img class="mask-group-5" src="images/mask-group-50.png" />
+            </div>
+            <div class="icons6">
+              <div class="icons7">
+                <div class="number">
+                  <div class="_1">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="txt8">
+            <div class="div5">諮詢專人客服</div>
+          </div>
+        </div>
+        <div class="list6">
+          <div class="img9">
+            <div class="img11">
+              <img class="mask-group-1-5" src="images/mask-group-1-50.png" />
+            </div>
+            <div class="icons8">
+              <div class="icons7">
+                <div class="number">
+                  <div class="_1">2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="txt8">
+            <div class="div5">到府丈量尺寸</div>
+          </div>
+        </div>
+        <div class="list7">
+          <div class="img12">
+            <div class="img13">
+              <img class="mask-group-1-4" src="images/mask-group-1-40.png" />
+            </div>
+            <div class="icons9">
+              <div class="icons7">
+                <div class="number">
+                  <div class="_1">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="txt10">
+            <div class="div5">確認款式後開始製作</div>
+          </div>
+        </div>
+        <div class="list8">
+          <div class="img14">
+            <div class="img13">
+              <img class="mask-group-2-2" src="images/mask-group-2-20.png" />
+            </div>
+            <div class="icons10">
+              <div class="icons7">
+                <div class="number">
+                  <div class="_1">4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="txt8">
+            <div class="div5">到府安裝</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="call-to-action-section">
+        <div class="contact">
+          <div class="join">
+            <div class="div6">加入會員</div>
+          </div>
+          <div class="txt11">
+            <div class="treating-all-skin-co3">
+              留下您的聯絡資訊﹐任何最新優惠及資訊將會傳送給您
+            </div>
+          </div>
+          <div class="inputbox">
+            <div class="inputbox2">
+              <div class="email">
+                <div class="book-an-appointment3">example@gmail.com</div>
+              </div>
+            </div>
+            <div class="bottom2">
+              <div class="frame-161">
+                <div class="book-an-appointment4">Submit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infor-wrapper">
+        <div class="infor">
+        <div class="infor2">
+          <div class="logo3">
+            <div class="logo4">
+              <div class="div7">樂柞家居</div>
+            </div>
+            <div class="logo-en2">
+              <div class="lezuo-home">Lezuo Home</div>
+            </div>
+          </div>
+          <div class="frame-175">
+            <div class="frame-172">
+              <div class="frame-171">
+                <div class="adress">
+                  <div class="treating-all-skin-co6">
+                    台中市潭子區民族路二段46-2號
+                  </div>
+                </div>
+                <div class="adress2">
+                  <div class="icons12">
+                    <div class="rectangle-79"></div>
+                  </div>
+                  <div class="adress3">
+                    <div class="treating-all-skin-co7">地址</div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-169">
+                <div class="frame-167">
+                  <div class="treating-all-skin-co6">04-25344833</div>
+                </div>
+                <div class="adress2">
+                  <div class="icons12">
+                    <div class="rectangle-79"></div>
+                  </div>
+                  <div class="adress3">
+                    <div class="treating-all-skin-co7">連絡電話</div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-170">
+                <div class="frame-168">
+                  <div class="treating-all-skin-co8">周一至周日 10:00-19:00</div>
+                </div>
+                <div class="adress2">
+                  <div class="icons12">
+                    <div class="rectangle-79"></div>
+                  </div>
+                  <div class="adress3">
+                    <div class="treating-all-skin-co7">營業時間</div>
+                  </div>
+                </div>
+              </div>
+              <div class="sicial">
+                <div class="txt12">
+                  <div class="treating-all-skin-co4">FOLLOW US</div>
+                </div>
+                <div class="social">
+                  <div class="icons11">
+                    <img class="instagram" src="images/instagram0.png" />
+                  </div>
+                  <div class="logo5">
+                    <div class="treating-all-skin-co5">樂柞家居</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      
+
+  <script src="script.js"></script>
+  <script>
+function toggleMobileMenu() {
+  const dropdown = document.querySelector('.dropdown');
+  dropdown.classList.toggle('active');
+}
+</script>
+  
+</body>
 </html>
